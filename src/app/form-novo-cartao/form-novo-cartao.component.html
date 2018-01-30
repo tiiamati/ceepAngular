@@ -1,4 +1,6 @@
-<form class="formNovoCartao container">
-  <textarea class="formNovoCartao-conteudo" name="formNovoCartao-conteudo" placeholder="Digite aqui"></textarea>
+<form [formGroup]="formCadastro" class="formNovoCartao container" (submit)="salvar($event)">
+  <textarea class="formNovoCartao-conteudo"
+            formControlName="cartaoConteudo"
+            name="formNovoCartao-conteudo" placeholder="Digite aqui" value=""></textarea>
   <input class="formNovoCartao-salvar" type="submit" value="Salvar">
 </form>

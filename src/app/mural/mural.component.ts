@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Pubsub from 'pubsub-js'
 
 @Component({
   selector: 'mural',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MuralComponent implements OnInit {
 
-  constructor() { }
+  cartoes = []
+
+  constructor() { 
+    Pubsub.subscribe('NOVO_CARTAO', (channel, dados) => {
+      this.cartoes.push(dados)
+    })
+  }
 
   ngOnInit() {
+    //this.cartoes.push({ conteudo: 'Bagulhos' })
   }
 
 }
