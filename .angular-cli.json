@@ -17,17 +17,13 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "",
       "styles": [
         "styles.css",
         "./assets/css/reset.css",
         "./assets/css/container.css",
         "./assets/css/opcoesDaPagina.css",
-        "./assets/css/botaoSync.css",
-        "./assets/css/mural.css",
-        "./assets/css/cabecalho.css",
-        "./assets/css/cartao.css",
-        "./assets/css/formNovoCartao.css"
+        "./assets/css/cartao.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -63,6 +59,9 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+      "inlineStyle": false,
+      "inlineTemplate": false
+    }
   }
 }
